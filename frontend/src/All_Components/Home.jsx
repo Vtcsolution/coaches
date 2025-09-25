@@ -1193,7 +1193,7 @@ const renderNumerologyForm = () => (
           name="name"
           value={formData.name}
           onChange={handleInputChange}
-          placeholder="Your full name"
+          placeholder="First Name"
           required
           className="rounded-md border-gray-300 dark:border-slate-700 dark:bg-slate-800 dark:text-gray-300"
         />
@@ -1221,17 +1221,7 @@ const renderNumerologyForm = () => (
             />
             {emailError && <p className="text-red-500 text-sm">{emailError}</p>}  
       </div>
-      <div>
-        <Label>Birth Time (Optional)</Label>
-        <Input
-          type="time"
-          name="birthTime"
-          value={formData.birthTime}
-          onChange={handleInputChange}
-          placeholder="HH:MM"
-          className="rounded-md border-gray-300 dark:border-slate-700 dark:bg-slate-800 dark:text-gray-300"
-        />
-      </div>
+      
       <Button
         onClick={handleNumerologyFormSubmit}
         disabled={isSubmitting}
