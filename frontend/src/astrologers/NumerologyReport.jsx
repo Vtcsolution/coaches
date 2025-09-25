@@ -239,13 +239,35 @@ const NumerologyReport = () => {
                 Verbind met een AI Tarot Psychic om dieper in je numerologische reis te duiken en verdere inzichten te ontgrendelen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="brand"
-                  className="rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-base sm:text-lg py-3 px-6 shadow-md transition-all duration-300"
-                  onClick={() => navigate(firstPsychicId ? `/chat/${firstPsychicId}` : "/chat")}
-                >
-                  1 minuut gratis chat met een coach
-                </Button>
+               <Button
+  variant="brand"
+  className="
+    relative overflow-hidden rounded-full 
+    text-white text-base sm:text-lg py-3 px-6 shadow-md
+    bg-[linear-gradient(270deg,#7c3aed,#4f46e5,#ec4899)] bg-[length:600%_600%]
+    animate-[gradientShift_8s_ease_infinite,pulse_3s_ease-in-out_infinite]
+  "
+  onClick={() =>
+    navigate(firstPsychicId ? `/chat/${firstPsychicId}` : "/chat")
+  }
+>
+  1 minuut gratis chat met een coach
+</Button>
+
+<style>
+{`
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+`}
+</style>
+
                 <Button
                   variant="outline"
                   className="rounded-full border-gray-300 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 py-3 px-6"
